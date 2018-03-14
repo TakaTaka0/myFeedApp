@@ -34,6 +34,18 @@ class myFeed {
        
     }
     
+    public function lineFeed () {
+        $num_of_data = 5;
+        for ($i=0; $i<$num_of_data; $i++) {
+            $item = $this->allUrl[0]['line']->channel->item[$i];
+            $title = $item->title;
+            $link = $item->link;
+            
+            echo "<a href=$link>$title</a></br>";
+            //var_dump($item);
+        }
+    }
+    
     
     public function getAllFeedUrl () {
         $mixiFeed = simplexml_load_file("http://alpha.mixi.co.jp/feed");

@@ -17,5 +17,10 @@ $myFeeds = new myFeed();
             <p>Mixi Feed</p>
             <?php h($myFeeds->mixiFeed()) ?>
         </div>
+        <div id="line-contents">
+            <p>Line Feed</p>
+            <?php h($myFeeds->lineFeed()) ?>
+        </div>
+        
     </body>
 </html>
