@@ -1,8 +1,6 @@
 <?php 
 
 class myFeed {
-    //private $mixiFeed;
-    //private $lineFeed;
     private $allUrl=[];
     
     public function __construct() {
