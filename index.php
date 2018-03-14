@@ -13,11 +13,11 @@ $myFeeds = new myFeed();
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <div id="mixi-contents">
+        <div class="mixi-contents">
             <p>Mixi Feed</p>
             <?php h($myFeeds->mixiFeed()) ?>
         </div>
-        <div id="line-contents">
+        <div class="line-contents">
             <p>Line Feed</p>
             <?php h($myFeeds->lineFeed()) ?>
         </div>

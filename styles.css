@@ -3,12 +3,12 @@ body {
 }
 
 
-#mixi-contents{
+.mixi-contents{
     width:500px;
     font-size:14px;
 }
 
-#line-contents{
+.line-contents{
     width:500px;
     font-size:14px;
 }
