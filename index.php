@@ -2,8 +2,7 @@
 
 require_once "./config.php";
 
-$test = new myFeed();
-$test->mixiFeed();
+$myFeeds = new myFeed();
 
 ?>
 
@@ -11,9 +10,12 @@ $test->mixiFeed();
 <html>
     <head>
         <meta charset="utf-8">
-        
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        
+        <div id="mixi-contents">
+            <p>Mixi Feed</p>
+            <?php h($myFeeds->mixiFeed()) ?>
+        </div>
     </body>
 </html>
