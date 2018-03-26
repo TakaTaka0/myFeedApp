@@ -14,16 +14,13 @@ $myFeeds = new myFeed();
     </head>
     
     <style>
-<<<<<<< HEAD
         ul {
             
             list-style-type: none;
         
             
         }
-=======
-        ul {list-style-type: none;}
->>>>>>> dc4b370... Modified get image
+
     </style>
     
     <body>
@@ -34,8 +31,7 @@ $myFeeds = new myFeed();
             <li><?php h($myFeeds->mixiFeed()) ?></li>
             </ul>
         </div>
-<<<<<<< HEAD
-=======
+
         <div class="line-contents">
             <p>Line Feed</p>
             <button id="showline-feed">Show Feed</button>
@@ -66,6 +62,5 @@ $myFeeds = new myFeed();
                 });
                
         </script>
->>>>>>> dc4b370... Modified get image
     </body>
 </html>

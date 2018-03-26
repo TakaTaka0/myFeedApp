@@ -50,13 +50,9 @@ class myFeed {
             //preg_match_all('/src="(.+?)"/', $imgs[$i], $src);
             
             if(isset($imgs[0])) {
-<<<<<<< HEAD
-                echo "<a href=$link target='_blank'>$title</a><img src=$imgs[1] width='193' height='130'></img></br>";
-=======
-                
+
                 echo "<a href=$link target='_blank'>$title</a><img src=$imgs[1] width='193' height='130'></img></br>";
                 
->>>>>>> dc4b370... Modified get image
             } else {
                 echo "<a href=$link>$title</a></br>";
             }
