@@ -14,7 +14,9 @@ $myFeeds = new myFeed();
     </head>
     
     <style>
-        ul {list-style-type: none;}
+        ul {
+            list-style-type: none;
+        }
     </style>
     
     <body>
