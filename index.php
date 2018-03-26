@@ -18,7 +18,6 @@ $myFeeds = new myFeed();
             
             list-style-type: none;
         
-            
         }
 
     </style>
@@ -40,12 +39,21 @@ $myFeeds = new myFeed();
             </ul>
         </div>
         
+        <div class="mercari-contents">
+            <p>Mercari Feed</p>
+            <button id="showmercari-feed">Show Feed</button>
+            <ul id= "mercariList">
+            <li><?php h($myFeeds->mercariFeed()) ?></li>
+            </ul>
+        </div>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             var flag = 0;
                 if(flag === 0) {
                     $('#mixiList').hide();    
-                    $('#lineList').hide();    
+                    $('#lineList').hide();
+                    $('#mercariList').hide();
                 };
                 
                 $("#showmixi-feed").on('click', function () {
@@ -58,6 +66,11 @@ $myFeeds = new myFeed();
                 
                 $("#showline-feed").on('click', function () {
                     $('#lineList').toggle();
+                    
+                });
+                
+                $("#showmercari-feed").on('click', function () {
+                    $('#mercariList').toggle();
                     
                 });
                

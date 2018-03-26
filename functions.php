@@ -58,14 +58,43 @@ class myFeed {
             }
         }
     }
+    
+    public function mercariFeed () {
+        $num_of_data = 5;
+        for ($i=0; $i<$num_of_data; $i++) {
+            $entry = $this->allUrl[0]['mercari']->entry[$i];
+            $title = $entry->title;
+            $link = $entry->link->attributes()->href;
+            
+            echo "<a href=$link target='_blank'>$title</a></br>";
+
+
+
+            //$img = $item->children('content', true)->encoded;
+            //$patternImg = '/<img.*src\s*=\s*[\"|\'](.*?)[\"|\'].*>/i';
+            //preg_match($patternImg, $itemContent, $imgs);
+            //var_dump($imgs);
+            //preg_match_all('/src="(.+?)"/', $imgs[$i], $src);
+            
+            // if(isset($imgs[0])) {
+
+            //     echo "<a href=$link target='_blank'>$title</a><img src=$imgs[1] width='193' height='130'></img></br>";
+                
+            // } else {
+            //     echo "<a href=$link>$title</a></br>";
+            // }
+        }
+    }
 
     public function getAllFeedUrl () {
         $mixiFeed = simplexml_load_file("http://alpha.mixi.co.jp/feed");
         $lineFeed = simplexml_load_file("https://engineering.linecorp.com/ja/blog/rss2");
+        $mercariFeed = simplexml_load_file("http://tech.mercari.com/feed");
         
         $this->allUrl[] = [
             'mixi'=>$mixiFeed,
-            'line'=>$lineFeed
+            'line'=>$lineFeed,
+            'mercari'=>$mercariFeed
         ];
        
     }
