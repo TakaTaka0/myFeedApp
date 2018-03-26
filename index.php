@@ -12,6 +12,16 @@ $myFeeds = new myFeed();
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
+    
+    <style>
+        ul {
+            
+            list-style-type: none;
+        
+            
+        }
+    </style>
+    
     <body>
         <div id="mixi-contents">
             <p>Mixi Feed</p>
