@@ -24,14 +24,12 @@ class myFeed {
             
             //画像のsrcを取得する
             $content = $entry->content;
-            // preg_match("/<img(.+?)>/", $content, $match);
-            // preg_match_all('/src="(.+?)"/', $match[1], $src);
-            $patternImg = '/<img.*src\s*=\s*[\"|\'](.*?)[\"|\'].*>/i';
-            preg_match($patternImg, $content, $getSrc);
-            //var_dump($match);
-            //$getSrc = $src[1][0];
+            preg_match("/<img(.+?)>/", $content, $match);
+            preg_match_all('/src="(.+?)"/', $match[1], $src);
+            
+            $getSrc = $src[1][0];
             $link  = $entry->link->attributes()->href;
-            echo "<a href=$link>$title</a><p>$strSum</p><img src=$getSrc[1] width='193' height='130'></img><br>";
+            echo "<a href=$link>$title</a><p>$strSum</p><img src=$getSrc width='193' height='130'></img><br>";
         }
        
     }
@@ -64,13 +62,15 @@ class myFeed {
         $this->allUrl[] = [
             'mixi'=>$mixiFeed,
             'line'=>$lineFeed
-        ];
+            ];
        
     }
     
 }
 
-    function h($s) {
-        return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
-    }
+function h($s) {
+    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
+
+
 ?>
